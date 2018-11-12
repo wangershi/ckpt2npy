@@ -10,5 +10,5 @@ First download the model from [tensorflow/models](https://github.com/tensorflow/
 
 After this, just use below commands to run it:
 ```Python
-python ckpt2npy
+python ckpt2npy.py
 ```
