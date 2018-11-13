@@ -8,9 +8,9 @@ var_to_shape_map = reader.get_variable_to_shape_map()
 inception_resnet_v2 = {}
 
 for key in var_to_shape_map:
-	sStr_2 = key
+	sStr_2 = key.replace('InceptionResnetV2/', '')
 	if not sStr_2 in inception_resnet_v2.keys():
-		inception_resnet_v2[sStr_2]=[reader.get_tensor(key)]
+		inception_resnet_v2[sStr_2] = reader.get_tensor(key)
 	else:
 		raise Exception("Same key in the same network!!!")
 
